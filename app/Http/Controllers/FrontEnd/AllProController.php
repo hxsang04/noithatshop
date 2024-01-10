@@ -16,7 +16,7 @@ class AllProController extends Controller
      */
     public function index()
     {
-        $title = 'All Products';
+        $title = 'Sản phẩm';
         $products = Product::where('product_status',1)->orderby('product_id','desc')->paginate(6);
         $categories = Category::all();
         return view('User.allproduct', compact('title','products','categories'));

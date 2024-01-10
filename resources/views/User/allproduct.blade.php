@@ -50,7 +50,7 @@
                                 <div class="single_product_menu">
                                     <p><span>{{ count($products) }} </span> Prodict Found</p>
                                 </div>
-                                <div class="single_product_menu d-flex">
+                                {{-- <div class="single_product_menu d-flex">
                                     <h5>short by : </h5>
                                     <select>
                                         <option data-display="Select">name</option>
@@ -77,7 +77,7 @@
                                                     class="ti-search"></i></span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                                 <div class="single_product_item">
                                     <img src="{{ asset('uploads/product/' . $product->product_image) }}" alt="">
                                     <div class="single_product_text">
-                                        <h4>{{ ucfirst($product->product_name) }}</h4>
+                                        <a href="{{ route('home.detail',$product->product_slug) }}"><h4>{{ ucfirst($product->product_name) }}</h4></a>
                                         <h3>{{ number_format($product->product_price) }}</h3>
                                         <input type="hidden" class="hidden_proid{{ $product->product_id }}"
                                             value="1">

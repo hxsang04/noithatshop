@@ -48,7 +48,7 @@ class HomeController extends Controller
             }
             return response()->json([
                 'action' => 'add',
-                'message' => 'Add To Cart Successfully'
+                'message' => 'Thêm sản phẩm vào giỏ thành công.'
             ]);
         }else{
             return response()->json([

@@ -46,36 +46,32 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('home.index') }}">Home</a>
+                                    <a class="nav-link" href="{{ route('home.index') }}">Trang chủ</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#l" id="navbarDropdown_1"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Shop
+                                    <a class="nav-link" href="{{route('allpro.index')}}">
+                                        Sản phẩm
                                     </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="{{ route('allpro.index') }}"> All Products</a>
-                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('blog.index') }}">
+                                        Bài viết
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('contact.index') }}">Liên hệ</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        pages
+                                        Khác
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="{{ Auth::check() ? route('logout.create') : route('sign.index') }}"> {{ Auth::check() ? 'logout' : 'login'  }}</a>
-                                        <a class="dropdown-item" href="{{ route('cart.index') }}">shopping cart</a>
+                                        <a class="dropdown-item" href="{{ Auth::check() ? route('logout.create') : route('sign.index') }}"> {{ Auth::check() ? 'Đăng xuất' : 'Đăng nhập'  }}</a>
+                                        <a class="dropdown-item" href="{{ route('cart.index') }}">Giỏ hàng</a>
 
                                     </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('blog.index') }}">
-                                        blog
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>

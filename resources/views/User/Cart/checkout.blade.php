@@ -8,8 +8,8 @@
                 <div class="col-lg-8">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item">
-                            <h2>Producta Checkout</h2>
-                            <p>Home <span>-</span> Shop Single</p>
+                            <h2>Đặt hàng</h2>
+                            <p>Trang chủ <span>-</span> Đặt hàng</p>
                         </div>
                     </div>
                 </div>

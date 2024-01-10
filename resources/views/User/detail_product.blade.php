@@ -7,8 +7,8 @@
                 <div class="col-lg-8">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item">
-                            <h2>Shop Single</h2>
-                            <p>Home <span>-</span> Shop Single</p>
+                            <h2>Chi tiết</h2>
+                            <p>Home <span>-</span>Chi tiết sản phẩm</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                                 <input readonly class="input-number hidden_proid{{ $product->product_id }}" type="text" value="1" min="1" max="{{ $product->product_qty }}">
                                 <span class="number-increment"> <i class="ti-plus"></i></span>
                             </div>
-                            <a href="#" class="btn_3 add_cart" id="{{ $product->product_id }}">add to cart</a>
+                            <a href="#" class="btn_3 add_cart" id="{{ $product->product_id }}">Thêm vào giỏ hàng</a>
                             <a href="#" class="like_us"> <i class="ti-heart"></i> </a>
                         </div>
                     </div>
@@ -399,7 +399,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="section_tittle text-center">
-                        <h2>Best Sellers <span>shop</span></h2>
+                        <h2>Bán chạy</h2>
                     </div>
                 </div>
             </div>
@@ -416,7 +416,7 @@
                                     <h4>{{ ucfirst($product->product_name) }}</h4>
                                 </a>
                                 <h3>{{ number_format($product->product_price) }}<sup class="price-agin">₫</sup></h3>
-                                <a href="#" class="add_cart" id="{{ $product->product_id }}">+ add to cart</a>
+                                <a href="#" class="add_cart" id="{{ $product->product_id }}">+ Thêm vào giỏ hàng</a>
                             </div>
                         </div>
                         @endforeach

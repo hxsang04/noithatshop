@@ -105,7 +105,7 @@
                                             <a href="{{ route('home.detail',$product->product_slug) }}"><h4>{{ ucfirst($product->product_name) }}</h4></a>
                                             <h3>{{ number_format($product->product_price) }}<sup class="price-agin">₫</sup></h3>
                                             <input type="hidden" class="hidden_proid{{ $product->product_id }}" value="1">
-                                            <a href="#" class="add_cart" id="{{ $product->product_id }}">+ add to cart<i
+                                            <a href="#" class="add_cart" id="{{ $product->product_id }}">+ Thêm vào giỏ hàng<i
                                                     class="ti-heart"></i></a>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@
                                             <a href="{{ route('home.detail',$product->product_slug) }}"><h4>{{ ucfirst($product->product_name) }}</h4></a>
                                             <h3>{{ number_format($product->product_price) }}<sup class="price-agin">₫</sup></h3>
                                             <input type="hidden" class="hidden_proid{{ $product->product_id }}" value="1">
-                                            <a href="#" class="add_cart" id="{{ $product->product_id }}">+ add to cart<i
+                                            <a href="#" class="add_cart" id="{{ $product->product_id }}">+ Thêm vào giỏ hàng<i
                                                     class="ti-heart"></i></a>
                                         </div>
                                     </div>
@@ -184,7 +184,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="section_tittle text-center">
-                        <h2>Best Sellers <span>shop</span></h2>
+                        <h2>Bán chạy</h2>
                     </div>
                 </div>
             </div>

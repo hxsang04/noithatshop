@@ -63,8 +63,8 @@ class CartController extends Controller
 
         if($request->change_pay == 'ATM'){
             $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-            $vnp_TmnCode = "HHP1RX2O"; //Mã website tại VNPAY
-            $vnp_HashSecret = "IIVOHTNIMSVQZTAUSANLVVBPRDRHNEPS"; //Chuỗi bí mật
+            $vnp_TmnCode = "W6YEW49O"; //Mã website tại VNPAY
+            $vnp_HashSecret = "WSBCHHFZBEGYEQNOQHVKLNCGZVHQTHMU"; //Chuỗi bí mật
             $vnp_Returnurl = "".route('vnpay.return')."";
 
             $total = 0;
@@ -74,12 +74,12 @@ class CartController extends Controller
 
             $vnp_TxnRef = $this->code;
             $vnp_OrderInfo = "Thanh Toán";
-            $vnp_OrderType = "billpayment";
+            $vnp_OrderType = 200000;
             $vnp_Amount = $total * 100;
             $vnp_Locale = config('app.locale');
             $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
             $inputData = array(
-                "vnp_Version" => "2.0.0",
+                "vnp_Version" => "2.1.0",
                 "vnp_TmnCode" => $vnp_TmnCode,
                 "vnp_Amount" => $vnp_Amount,
                 "vnp_Command" => "pay",
@@ -92,15 +92,20 @@ class CartController extends Controller
                 "vnp_ReturnUrl" => $vnp_Returnurl,
                 "vnp_TxnRef" => $vnp_TxnRef,
             );
+
+            if (isset($vnp_BankCode) && $vnp_BankCode != "") {
+                $inputData['vnp_BankCode'] = $vnp_BankCode;
+            }
+
             ksort($inputData);
             $query = "";
             $i = 0;
             $hashdata = "";
             foreach ($inputData as $key => $value) {
                 if ($i == 1) {
-                    $hashdata .= '&' . $key . "=" . $value;
+                    $hashdata .= '&' . urlencode($key) . "=" . urlencode($value);
                 } else {
-                    $hashdata .= $key . "=" . $value;
+                    $hashdata .= urlencode($key) . "=" . urlencode($value);
                     $i = 1;
                 }
                 $query .= urlencode($key) . "=" . urlencode($value) . '&';
